@@ -49,6 +49,21 @@ body{background:var(--bg);color:var(--ink);font-family:var(--display);direction:
 .bk{--a:var(--teal)} .as{--a:var(--rust)} .hero{--a:var(--gold)}
 .note{color:var(--muted);font-size:13px;text-align:center}
 @media (prefers-reduced-motion:reduce){.card,.foot .go span{transition:none}.card:hover{transform:none}}
+
+/* خلفية احترافية: صورة المشروع مع طبقة كحلية، وبطاقات زجاجية */
+:root,:root[data-theme],:root:not([data-theme]){--ink:#f6f2ea;--muted:rgba(246,242,234,.78);--line:rgba(255,255,255,.18);--card:rgba(255,255,255,.1);
+  --gold:#d8b273;--teal:#63d0c8;--rust:#ef9a7b;color-scheme:dark}
+body{background:#0e1a24;min-height:100vh;display:flex;align-items:center;position:relative;isolation:isolate}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:url(assets/bg.webp) center/cover no-repeat;transform:scale(1.04);animation:bgZoom 40s ease-in-out infinite alternate}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,26,36,.86) 0%,rgba(14,26,36,.5) 42%,rgba(14,26,36,.62) 70%,rgba(14,26,36,.93) 100%)}
+@keyframes bgZoom{from{transform:scale(1.04)}to{transform:scale(1.12) translate(-1%,1%)}}
+.wrap{width:100%}
+.hero h1{text-shadow:0 4px 24px rgba(0,0,0,.45)}
+.hero .mark{filter:drop-shadow(0 8px 24px rgba(0,0,0,.4))}
+.card{backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.card:hover{background:rgba(255,255,255,.16);box-shadow:0 26px 70px rgba(0,0,0,.45)}
+.card .mark{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){body::before{animation:none}}
 </style>
 </head>
 <body>
