@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مدار مشروعات</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 92%27%3E%3Cpath fill=%27%2316232e%27 fill-rule=%27evenodd%27 d=%27M10 0H88a12 12 0 0 1 12 12V80L88 92H28V51L0 63V10A10 10 0 0 1 10 0ZM28 22V66H72V22Z%27/%3E%3Cpath fill=%27%23b8935a%27 d=%27M0 69L28 57V92H10A10 10 0 0 1 0 82Z%27/%3E%3C/svg%3E">
+<style>
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+
+/* Layout: one centered column — the parent lockup large, its two platforms as clickable cards beneath */
+:root{
+  --bg:#f3f4f6; --card:#ffffff; --ink:#16232e; --muted:#5b6670; --line:#e2e5e9;
+  --gold:#b8935a; --teal:#2a8a8a; --rust:#a9533a;
+  --display:"Tajawal","Segoe UI",Tahoma,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#16232e; --card:#1d2d3a; --ink:#f1ede4; --muted:#a9b4bd; --line:#2c3e4c;
+  --gold:#cfa968; --teal:#56c3bd; --rust:#e08a6c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#16232e; --card:#1d2d3a; --ink:#f1ede4; --muted:#a9b4bd; --line:#2c3e4c;
+  --gold:#cfa968; --teal:#56c3bd; --rust:#e08a6c; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--display);direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:clamp(40px,9vh,96px)}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:clamp(40px,7vh,72px)}
+.mark{color:var(--ink);flex:none;display:block}
+.mark .acc{fill:var(--a)}
+.hero{display:flex;align-items:center;gap:clamp(14px,2.4vw,26px)}
+.hero .mark{width:clamp(84px,13vw,150px);height:auto}
+.hero h1{margin:0;font-weight:800;font-size:clamp(46px,8.4vw,104px);line-height:1;letter-spacing:-.5px;text-wrap:balance}
+.hero p{margin:6px 0 0;color:var(--muted);font-weight:500;font-size:clamp(20px,3.2vw,40px);line-height:1.1}
+.grid{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;gap:18px;padding:28px 28px 22px;background:var(--card);border:1px solid var(--line);border-radius:18px;
+  color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(22,35,46,.12);border-color:var(--a)}
+.card:focus-visible{outline:3px solid var(--a);outline-offset:3px}
+.lock{display:flex;align-items:center;gap:16px;min-width:0}
+.lock .mark{width:clamp(62px,8vw,84px);height:auto}
+.lock h2{margin:0;font-weight:800;font-size:clamp(30px,4.2vw,44px);line-height:1.05}
+.lock p{margin:4px 0 0;color:var(--muted);font-size:clamp(16px,1.9vw,20px);font-weight:500}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:14px}
+.foot .go{color:var(--a);font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.foot .go span{transition:transform .18s ease}
+.card:hover .go span{transform:translateX(-4px)}
+.bk{--a:var(--teal)} .as{--a:var(--rust)} .hero{--a:var(--gold)}
+.note{color:var(--muted);font-size:13px;text-align:center}
+@media (prefers-reduced-motion:reduce){.card,.foot .go span{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="mdO" clipPathUnits="userSpaceOnUse"><path d="M10 0H88a12 12 0 0 1 12 12V80L88 92H10A10 10 0 0 1 0 82V10A10 10 0 0 1 10 0Z"/></clipPath>
+    <mask id="mdM" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="92"><rect width="100" height="92" fill="#fff"/><rect x="28" y="22" width="44" height="44" fill="#000"/><path d="M0 63L28 51V92H0Z" fill="#000"/></mask>
+    <symbol id="mark" viewBox="0 0 100 92"><g clip-path="url(#mdO)"><rect width="100" height="92" fill="currentColor" mask="url(#mdM)"/><path style="fill:var(--a)" d="M0 69L28 57V92H0Z"/></g></symbol>
+  </defs>
+</svg>
+
+<main class="wrap">
+  <header class="hero">
+    <svg class="mark" viewBox="0 0 100 92" role="img" aria-label="شعار مدار مشروعات"><use href="#mark"/></svg>
+    <div>
+      <h1>مدار مشروعات</h1>
+      <p>للتطوير العقاري</p>
+    </div>
+  </header>
+
+  <nav class="grid" aria-label="منصات مدار">
+    <a class="card bk" href="https://jabeen-bookings.online/" target="_blank" rel="noopener">
+      <div class="lock">
+        <svg class="mark" viewBox="0 0 100 92" aria-hidden="true"><use href="#mark"/></svg>
+        <div><h2>مدار الحجوزات</h2><p>منصة حجز الوحدات العقارية</p></div>
+      </div>
+      <div class="foot"><span>jabeen-bookings.online</span><span class="go">فتح المنصة <span>←</span></span></div>
+    </a>
+    <a class="card as" href="https://s2daho0omes2.github.io/madar-assets/" target="_blank" rel="noopener">
+      <div class="lock">
+        <svg class="mark" viewBox="0 0 100 92" aria-hidden="true"><use href="#mark"/></svg>
+        <div><h2>مدار الأصول</h2><p>منصة إدارة الأصول العقارية</p></div>
+      </div>
+      <div class="foot"><span>نسخة تجريبية</span><span class="go">فتح المنصة <span>←</span></span></div>
+    </a>
+  </nav>
+
+  <p class="note">إحدى منصات مدار مشروعات للتطوير العقاري</p>
+</main>
+</body>
+</html>
